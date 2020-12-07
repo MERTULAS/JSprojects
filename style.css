@@ -73,20 +73,46 @@ body{
     font-size: small;
 }
 .drum{
-    width: 40%;
-    height: 35%;
-    margin-top: 31%;
+    width: 30%;
+    height: 25%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: absolute;
+}
+.left-side{
+    width: 20%;
+    height: auto;
+    display: flex;
+}
+.drum-mid{
+    width: 60%;
+    height: auto;
+}
+.mid-up{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.mid-down{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: -15%;
+}
+.right-side{
+    width: 20%;
+    display: flex;
+    justify-content: center;
 }
 .kick{
-    width: 24%;
-    height: 50%;
+    width: 40%;
+    height: 100%;
     background-color: rgb(230, 222, 151);
     border-radius: 50%;
-    margin-top: 15%;
+    margin-bottom: -15%;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -96,15 +122,14 @@ body{
 }
 .kick-playing{
     transform: scale(1.2);
-    
 }
-.kick>p{
+/*.kick>p{
     bottom: 100px;
     left: 48.2%;
     position: fixed;
     font-size: 22px;
     font-weight: bold;
-}
+}*/
 .legs{
     width: 6%;
     height: 30%;
@@ -118,19 +143,16 @@ body{
     transform: rotate(-10deg);
 }
 .boom{
-    width:19%;
-    height: 50%;
-    background-color: rgb(134, 84, 84);
+    width: 35%;
+    height: 70%;
     background-image: linear-gradient(to right,rgb(121, 49, 49),rgb(214, 86, 86),rgb(121, 49, 49));
-    position: absolute;
-    margin-right: 300px;
-    margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid black;
     transition: transform 0.1s;
-    z-index: 1;
+    margin-left: -10%;
+    margin-top: -15%;
 }
 .boom-playing{
     transform: scale(1.2);
@@ -151,10 +173,10 @@ body{
     border-top: none;
 }
 .hi-hat{
-    width: 13%;
-    height: 35%;
-    margin-right: -110px;
-    margin-top: 60px;
+    width: 25%;
+    height: 80%;
+    margin-top: -25%;
+    margin-right: -10%;
 }
 .hat{
     background-image: linear-gradient(to right,rgb(121, 49, 49),rgb(214, 86, 86),rgb(121, 49, 49));
@@ -185,17 +207,17 @@ body{
     border-top: none;
 }
 .hi-hat-legs{
-    height: 90px;
+    height: 90%;
 }
 .upper-legs{
-    height: 30px;
+    height: 30%;
     display: flex;
     justify-content: center;
 }
 .leg{
     background-color: black;
-    width: 5px;
-    height: 35px;
+    width: 6%;
+    height: 180%;
     border-radius: 30%;
     margin-left: 10px;
     margin-right: 10px;
@@ -207,14 +229,14 @@ body{
     transform: rotate(30deg);
 }
 .mid-legs{
-    height: 40px;
+    height: 50%;
     display: flex;
     justify-content: center;
 }
 .leg-m{
     background-color: black;
-    width: 5px;
-    height: 40px;
+    width: 8%;
+    height: 100%;
 }
 .lower-legs{
     height: 20px;
@@ -229,11 +251,11 @@ body{
     transform: rotate(-30deg);
 }
 .ride{
-    width: 12%;
-    height: 80%;
-    margin-top: 8%;
-    margin-right: -57%;
-    position: absolute;
+    width: 80%;
+    height: 100%;
+    margin-top: -5%;
+    margin-right: -20%;
+    display: flex;
     flex-direction: column;
 }
 .ride-up{
@@ -250,7 +272,7 @@ body{
 .ride-in{
     background-color: rgb(250, 214, 53);
     width: auto;
-    height: 10px;
+    height: 30%;
     border-radius: 50%;
 }
 .up-side-ride{
@@ -258,37 +280,35 @@ body{
 }
 .between-rides{
     background-color: black;
-    width: 5px;
-    height: 8px;
+    width: 5%;
+    height: 30%;
     align-self: center;
 }
 .ride-mid-leg{
     width: auto;
-    height: 120px;
+    height: 50%;
     display: flex;
     justify-content: center;
 }
 .long-leg{
     background-color: black;
-    width: 5px;
-    height: 120px;
+    width: 6%;
 }
 .open-hat{
-    width: 5%;
-    height: 20%;
-    margin-top: -23%;
-    margin-right: 25%;
+    width: 80%;
+    height: 100%;
     flex-direction: column;
+    margin-top: -80%;
+    margin-left: 25%;
 }
 .open-up-div{
-    transform: rotate(20deg);
+    transform: rotate(25deg);
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: 70%;
-    margin-left: 24%;
-    margin-bottom: -5%;
+    margin-bottom: -18%;
 }
 .open-up{
     transform: rotate(20deg);
@@ -296,7 +316,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     height: 15%;
-    width: 100%;
+    width: 130%;
     transition: all 0.1s;
 }
 .open-up-playing{
@@ -304,37 +324,41 @@ body{
 }
 .up-leg{
     background-color: black;
-    width: 5px;
-    height: 120px;
+    width: 7%;
+    height: 80%;
 }
 .open-mid-leg{
     width: auto;
-    height: 100px;
+    height: 50%;
     display: flex;
     justify-content: center;
+    margin-left: -70%;
 }
 .open-long-leg{
-    width: 5px;
-    height: 100px;
+    width: 5%;
+    height: 100%;
     background-color: black;
 }
+.open-hat>.lower-legs{
+    margin-left: -70%;
+}
 .snare-tom{
-    width: 50%;
-    height: 20%;
-    margin-top: -25%;
+    width: 60%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-right: 1%;
     transition: transform 0.1s;
+    margin-left: 10%;
+    z-index: 1;
 }
 .snare-tom-playing{
     transform: scale(1.2);
 }
 .tom{
     background-image: linear-gradient(to right,rgb(121, 49, 49),rgb(214, 86, 86),rgb(121, 49, 49));
-    width: 10%;
-    height: 55%;
+    width: 40%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -358,34 +382,37 @@ body{
     background-image: linear-gradient(to right,rgb(121, 49, 49),rgb(214, 86, 86),rgb(121, 49, 49));
 }
 .tink{
-    width: 3%;
-    height: 60%;
+    width: 15%;
+    height: 80%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     padding: 5px;
     transition: transform 0.1s;
     z-index: 1;
+    margin-top: 100%;
 }
 .tink-playing{
     transform: scale(1.2);
 }
 .tinks{
     width: 20%;
-    height: 60%;
+    height: 80%;
     background-color: black;
+    margin-top: 50%;
 }
 .t1{
-    transform: rotate(-45deg);
+    transform: rotate(-30deg);
+    margin-right: 30%;
 }
 .t2{
-    transform: rotate(45deg);
+    transform: rotate(30deg);
+    margin-left: 30%;
 }
 .snare{
     background-image: linear-gradient(to right,rgb(121, 49, 49),rgb(214, 86, 86),rgb(121, 49, 49));
-    width: 10%;
-    height: 55%;
-    margin-right: 1%;
+    width: 40%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -398,26 +425,28 @@ body{
     transform: scale(1.2);
 }
 .drummer{
-    margin-top: -8%;
+    margin-bottom: -11%;
     display: flex;
+    width: 10%;
+    height: 30%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: -2%;
+    margin-right: -2%;
 }
 .drummer-head{
     background-color:wheat;
-    width: 25%;
-    height: 55px;
+    width: 24%;
+    height: 25%;
     border-radius: 40%;
     display: flex;
     flex-direction: column;
 }
 .hair{
-    margin-top:-2%;
+    margin-top:-1%;
     background-color: rgb(209, 180, 17);
     width: auto;
-    height: 20px;
+    height: 30%;
     border-top-left-radius:70%;
     border-top-right-radius:10%;
 }
@@ -428,25 +457,27 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    height: 70%;
 }
 .eyes{
     display: flex;
     justify-content: space-around;
-    width: 40px;
+    width: 100%;
+    height: 30%;
     margin-top: 2px;
 }
 .eye{
     background-color: black;
-    width: 15px;
-    height: 10px;
+    width: 28%;
+    height: 80%;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     border-bottom-left-radius: 30%;
     border-bottom-right-radius: 30%;
 }
 .nose{
-    width: 5px;
-    height: 10px;
+    width: 10%;
+    height: 15%;
     border-bottom: 1px solid  rgb(189, 163, 130);
     border-radius: 50%;
     box-shadow: 0 2px 8px 1px;
@@ -454,23 +485,26 @@ body{
 .mouth{
     border-bottom: 2px solid brown;
     width: 35%;
-    height: 5px;
+    height: 5%;
+    margin-bottom: -2%;
     border-radius: 50%;
 }
 .drummer-body{
-    width:200px;
+    width:100%;
+    height: 75%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 .drummer-right-arm{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    width: 20%;
 }
 .right-shoulder{
     background-color: antiquewhite;
-    width: 30px;
-    height: 60px;
+    width: 100%;
+    height: 35%;
     border-top-left-radius: 30%;
     border-top-right-radius: 30%;
     border-bottom-left-radius: 20%;
@@ -488,8 +522,8 @@ body{
 }
 .right-frontArm{
     background-color: antiquewhite;
-    width: 30px;
-    height: 60px;
+    width: 100%;
+    height: 35%;
     margin-top: 4px;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
@@ -504,32 +538,32 @@ body{
     transform: rotate(100deg) translate(-50%, 40%);
 }
 .right-frontArm-boom{
-    transform: rotate(40deg) translate(-80%, 50%);
+    transform: rotate(25deg) translate(-70%, 40%);
 }
 .right-drum-stick{
     background-color: burlywood;
-    width: 5px;
-    height: 50px;
+    width: 10%;
+    height: 30%;
     margin-top: 2px;
-    margin-left: 12px;
+    margin-left: 45%;
     transition: all .1s;
 }
 .right-drum-stick-clap{
     transform: rotate(30deg) translate(-600%,-20%);
-    z-index: 1;
+    z-index: 2;
 }
 .right-drum-stick-openhat{
-    transform: rotate(110deg) translate(-1300%,180%);
+    transform: rotate(100deg) translate(-2200%,160%);
     z-index: 1;
 }
 .right-drum-stick-boom{
-    transform: rotate(30deg) translate(-1300%, 90%);
+    transform: rotate(30deg) translate(-1500%, 60%);
     z-index: 1;
 }
 .drummer-chest{
     background-color: rgb(75, 74, 70);
-    width: 100px;
-    height: 130px;
+    width: 60%;
+    height: 100%;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
     display: flex;
@@ -543,11 +577,12 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    width: 20%;
 }
 .left-shoulder{
     background-color: antiquewhite;
-    width: 30px;
-    height: 60px;
+    width: 100%;
+    height: 35%;
     border-top-left-radius: 30%;
     border-top-right-radius: 30%;
     border-bottom-left-radius: 20%;
@@ -565,8 +600,8 @@ body{
 }
 .left-frontArm{
     background-color: antiquewhite;
-    width: 30px;
-    height: 60px;
+    width: 100%;
+    height: 35%;
     margin-top: 4px;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
@@ -578,29 +613,28 @@ body{
     transform: rotate(30deg);
 }
 .left-frontArm-hat{
-    transform: rotate(-20deg) translate(100%, 30%);
+    transform: rotate(-25deg) translate(80%, 40%);
 }
 .left-frontArm-ride{
-    transform: rotate(-40deg) translate(100%, 40%);
+    transform: rotate(-40deg) translate(110%, 45%);
 }
 .left-drum-stick{
     background-color: burlywood;
-    width: 5px;
-    height: 50px;
+    width: 10%;
+    height: 30%;
     margin-top: 2px;
-    margin-left: 12px;
+    margin-left: 45%;
     transition: all .1s;
 }
 .left-drum-stick-clap{
     transform: rotate(30deg) translate(-600%,-20%);
-    z-index: 1;
+    z-index: 2;
 }
 .left-drum-stick-hat{
-    transform: rotate(-20deg) translate(1000%, 50%);
+    transform: rotate(-25deg) translate(1450%, 30%);
     z-index: 1;
 }
 .left-drum-stick-ride{
-    transform: rotate(-50deg) translate(1300%, 105%);
+    transform: rotate(-50deg) translate(2100%, 70%);
     z-index: 1;
 }
-
