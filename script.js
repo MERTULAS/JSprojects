@@ -52,6 +52,11 @@ var tomParts = [rightShoulder, rightFrontArm, rightDrumStick];
 var tomAnims = ["right-shoulder-clap", "right-frontArm-clap", "right-drum-stick-clap"];
 var globalParts = [clapParts, hatParts, ,openhatParts, boomParts, rideParts, snareParts, tomParts];
 var globalAnims = [clapAnims, hatAnims, ,openhatAnims, boomAnims, rideAnims, snareAnims, tomAnims];
+var introPartsFirst = clapParts;
+var introAnimsFirst = ["r-shoulder-anim-class", "r-frontArm-anim-class", "r-stick-anim-class", "l-shoulder-anim-class", "l-frontArm-anim-class", "l-stick-anim-class"];
+introPartsFirst.forEach((part, index) => {
+    part.classList.add(introAnimsFirst[index]);
+});
 pads.forEach((pad, index)=>{
     let key = document.createElement("p");
     key.className = "soundsKey";
@@ -68,6 +73,9 @@ pads.forEach((pad, index)=>{
 });
 console.log(audios);
 window.addEventListener("keydown", (e)=>{
+    introPartsFirst.forEach((part, index) => {
+        part.classList.remove(introAnimsFirst[index]);
+    });
     if(e.keyCode == 65){
         if(!audios[0]) return;
         audios[0].currentTime = 0;

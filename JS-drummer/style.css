@@ -114,25 +114,30 @@ body{
     border-radius: 50%;
     margin-bottom: -15%;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: center;
     z-index: 2;
     border: 8px solid rgb(121, 49, 49);
     transition: transform 0.1s;
 }
+.kick-legs{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
 .kick-playing{
     transform: scale(1.2);
 }
-/*.kick>p{
-    bottom: 100px;
-    left: 48.2%;
-    position: fixed;
+.drum-brand{
     font-size: 22px;
     font-weight: bold;
-}*/
+    margin-bottom: 20%;
+}
 .legs{
     width: 6%;
-    height: 30%;
+    height: 100%;
     background-color: black;
     border-radius: 40%;
     margin: -3px;
@@ -435,7 +440,7 @@ body{
     margin-right: -2%;
 }
 .drummer-head{
-    background-color:wheat;
+    background-color:rgb(212, 186, 152);
     width: 24%;
     height: 25%;
     border-radius: 40%;
@@ -451,7 +456,7 @@ body{
     border-top-right-radius:10%;
 }
 .face{
-    background-color:wheat;
+    background-color:rgb(212, 186, 152);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -502,14 +507,21 @@ body{
     width: 20%;
 }
 .right-shoulder{
-    background-color: antiquewhite;
+    background-color: rgb(212, 186, 152);
     width: 100%;
     height: 35%;
-    border-top-left-radius: 30%;
+    border-top-left-radius: 80%;
     border-top-right-radius: 30%;
     border-bottom-left-radius: 20%;
     border-bottom-right-radius: 20%;
     transition: all .1s;
+}
+.r-shoulder-anim-class{
+    animation: r-shoulder-anim .2s infinite alternate;
+}
+@keyframes r-shoulder-anim{
+    0%{transform: rotate(170deg) translateY(60%);}
+    100%{transform: rotate(190deg) translateY(60%);}
 }
 .right-shoulder-clap{
     transform: rotate(-15deg) translate(20%, 10%);
@@ -521,7 +533,7 @@ body{
     transform: rotate(15deg) translate(-15%, 20%);
 }
 .right-frontArm{
-    background-color: antiquewhite;
+    background-color: rgb(212, 186, 152);
     width: 100%;
     height: 35%;
     margin-top: 4px;
@@ -530,6 +542,13 @@ body{
     border-top-right-radius: 20%;
     border-top-left-radius: 20%;
     transition: all .1s;
+}
+.r-frontArm-anim-class{
+    animation: r-frontArm-anim .2s infinite alternate;
+}
+@keyframes r-frontArm-anim{
+    0%{transform: rotate(190deg) translate(100%,260%);}
+    100%{transform: rotate(230deg) translate(300%,200%);}
 }
 .right-frontArm-clap{
     transform: rotate(30deg);
@@ -548,6 +567,13 @@ body{
     margin-left: 45%;
     transition: all .1s;
 }
+.r-stick-anim-class{
+    animation: r-stick-anim .2s infinite alternate;
+}
+@keyframes r-stick-anim{
+    0%{transform: rotate(200deg) translate(2600%, 500%);}
+    100%{transform: rotate(230deg) translate(4400%, 400%);}
+}
 .right-drum-stick-clap{
     transform: rotate(30deg) translate(-600%,-20%);
     z-index: 2;
@@ -564,14 +590,38 @@ body{
     background-color: rgb(75, 74, 70);
     width: 60%;
     height: 100%;
-    border-top-left-radius: 5%;
-    border-top-right-radius: 5%;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
     text-align: center;
     font-size: 20px;
     color: aliceblue;
+}
+.tank-top{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 25%;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+}
+.tshirts-sides{
+    width: 25%;
+    background-color: rgb(212, 186, 152);
+}
+.right{
+    border-top-right-radius: 80%;
+    border-bottom-left-radius: 150%;
+}
+.left{
+    border-top-left-radius: 80%;
+    border-bottom-right-radius: 150%;
+}
+.chest-band{
+    display: flex;
+    justify-content: center;
 }
 .drummer-left-arm{
     display: flex;
@@ -580,14 +630,21 @@ body{
     width: 20%;
 }
 .left-shoulder{
-    background-color: antiquewhite;
+    background-color: rgb(212, 186, 152);
     width: 100%;
     height: 35%;
     border-top-left-radius: 30%;
-    border-top-right-radius: 30%;
+    border-top-right-radius: 80%;
     border-bottom-left-radius: 20%;
     border-bottom-right-radius: 20%;
     transition: all .1s;
+}
+.l-shoulder-anim-class{
+    animation: l-shoulder-anim .2s infinite alternate;
+}
+@keyframes l-shoulder-anim{
+    0%{transform: rotate(-170deg) translateY(60%);}
+    100%{transform: rotate(-190deg) translateY(60%);}
 }
 .left-shoulder-clap{
     transform: rotate(-15deg) translate(20%, 10%);
@@ -599,7 +656,7 @@ body{
     transform: rotate(-20deg) translate(20%, 20%);
 }
 .left-frontArm{
-    background-color: antiquewhite;
+    background-color: rgb(212, 186, 152);
     width: 100%;
     height: 35%;
     margin-top: 4px;
@@ -608,6 +665,13 @@ body{
     border-top-right-radius: 20%;
     border-top-left-radius: 20%;
     transition: all .1s;
+}
+.l-frontArm-anim-class{
+    animation: l-frontArm-anim .2s infinite alternate;
+}
+@keyframes l-frontArm-anim{
+    0%{transform: rotate(-190deg) translate(-100%,260%);}
+    100%{transform: rotate(-230deg) translate(-300%,200%);}
 }
 .left-frontArm-clap{
     transform: rotate(30deg);
@@ -625,6 +689,13 @@ body{
     margin-top: 2px;
     margin-left: 45%;
     transition: all .1s;
+}
+.l-stick-anim-class{
+    animation: l-stick-anim .2s infinite alternate;
+}
+@keyframes l-stick-anim{
+    0%{transform: rotate(-200deg) translate(-2600%, 500%);}
+    100%{transform: rotate(-230deg) translate(-4400%, 400%);}
 }
 .left-drum-stick-clap{
     transform: rotate(30deg) translate(-600%,-20%);
