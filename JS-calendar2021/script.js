@@ -1,5 +1,9 @@
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const colors = [getComputedStyle(document.documentElement)
+    .getPropertyValue("--mood1"), getComputedStyle(document.documentElement)
+    .getPropertyValue("--mood2"), getComputedStyle(document.documentElement)
+    .getPropertyValue("--mood3")];
 const calender = document.querySelector(".calender");
 var calenderInner = "";
 monthNames.forEach(name => {
@@ -54,17 +58,33 @@ const moods = document.querySelectorAll(".mood");
 var selectedMood = "";
 moods.forEach(mood => {
   mood.addEventListener("click", (e) => {
-    console.log(e.target.parentElement.childNodes);
-    let temp = e.target.style.backgroundColor;
-    e.target.style.backgroundColor = getComputedStyle(document.documentElement)
-    .getPropertyValue(`--${e.target.classList[1]}`);
-    document.documentElement.style.setProperty(`--${e.target.classList[1]}`, temp);
-    selectedMood = e.target.style.backgroundColor;
+    if(e.target.classList.contains("scaleUp"))
+      {
+        mood.classList.remove("scaleUp");
+        selectedMood = getComputedStyle(document.documentElement).getPropertyValue(`--${e.target.classList[1]}`);
+        temp = e.target.style.backgroundColor;
+      e.target.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue(`--${e.target.classList[1]}`);
+      document.documentElement.style.setProperty(`--${e.target.classList[1]}`, temp);
+      }
+    else
+    {
+      colors.forEach((color, index) => {
+          [...moods][index].style.backgroundColor = "white";
+        console.log([...moods][index].style.backgroundColor);
+          document.documentElement.style.setProperty("--mood" + `${index + 1}`, color);
+      });
+      moods.forEach(mood => mood.classList.remove("scaleUp"));
+      mood.classList.add("scaleUp");
+      temp = e.target.style.backgroundColor;
+      e.target.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue(`--${e.target.classList[1]}`);
+      document.documentElement.style.setProperty(`--${e.target.classList[1]}`, temp);
+      selectedMood = e.target.style.backgroundColor;
+    } });
   });
-});
 const dayCircles = document.querySelectorAll(".dayCirclesInner");
 dayCircles.forEach(day => day.addEventListener("click", (e) => {
     console.log(selectedMood);
+    if(e.target.style.backgroundColor == "green") return;
   if(selectedMood == "white") selectedMood = "rgba(170,170,170, 0.6)";
     e.target.style.backgroundColor = selectedMood;
 }));
