@@ -1,52 +1,52 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 body{background-color: #516dff;
-  background:red;
-  font-family: 'Press Start 2P';
-  font-size:40px;
-  height:100vh;
-  text-align:center;
-  margin:0;
-  overflow:hidden}
+    background:red;
+    font-family: 'Press Start 2P';
+    font-size:40px;
+    height:100vh;
+    text-align:center;
+    margin:0;
+    overflow:hidden}
 .main{display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-  width:100vw;
-  transition: 1s margin;}
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    width:100vw;
+    transition: 1s margin;}
 .mainUp{margin-top: -100vh}
 .main p{line-height:1.4;}
 .play{border:none;
-  font-size:15px;
-  width:150px;
-  height:50px;
-  font-family: 'Press Start 2P';
-  cursor:pointer}
+    font-size:15px;
+    width:150px;
+    height:50px;
+    font-family: 'Press Start 2P';
+    cursor:pointer}
 .play > p {margin: auto;}
 .bug-list{display:flex;
-justify-content:center;
-align-items:center;}
+    justify-content:center;
+    align-items:center;}
 .bug-in-list{width:150px;
-  height:150px;
-  border:3px solid white;
-display:flex;
-margin: 10px;
-cursor:pointer}
+    height:150px;
+    border:3px solid white;
+    display:flex;
+    margin: 10px;
+    cursor:pointer}
 .bug-in-list:hover{background:white;}
 img{width:100px;
-  height:100px;
-  align-self:center;
-  margin:auto;}
+    height:100px;
+    align-self:center;
+    margin:auto;}
 .theGame{position:relative;}
 .gameTime{height:50px;
-  position:absolute;
-  left:10px;
-  top:10px;}
+    position:absolute;
+    left:10px;
+    top:10px;}
 .gameScore{height:200px;
-  position:absolute;
-  right:10px;
-  top:10px;}
+    position:absolute;
+    right:10px;
+    top:10px;}
 .alert{display: none;
     width: 400px;
     height: 300px;
@@ -55,5 +55,6 @@ img{width:100px;
     left: calc(50% - 200px);}
 .gameScore, .gameTime{font-size:25px;}
 .newBug{position: absolute;
-  left: 50%;
-  top:10%;}
+    left: 50%;
+    top:10%;
+    cursor:pointer}
