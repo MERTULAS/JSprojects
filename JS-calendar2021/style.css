@@ -1,0 +1,76 @@
+.main{width:1000px;
+  height:1560px;
+  margin:50px auto}
+.head{width:100%;
+  height:12%;
+  text-align:center;}
+.head > p{font-size:25px}
+.moods{width:200px;
+  height:50px;
+  margin: 10px auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;}
+.mood{width:50px;
+  height:50px;
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-evenly;
+  background-color: white;
+  cursor:pointer;
+  transition: all 1s;}
+:root{--mood1: red;
+  --mood2: #ffbb00;
+  --mood3: #08FF00}
+.mood1, .mood1 .eye{border: 2px solid var(--mood1);}
+.mood1 .mouth{border-top:2px solid var(--mood1);
+  border-radius:50%}
+.mood2, .mood2 .eye{border: 2px solid var(--mood2);}
+.mood2 .mouth{border-bottom:2px solid var(--mood2);}
+.mood3, .mood3 .eye{
+  border: 2px solid var(--mood3);}
+.mood3 .mouth{border-bottom: 2px solid var(--mood3);
+  border-radius:50%;}
+.eyes{display:flex;
+  justify-content:space-evenly;}
+.eye{width:5px;
+  height:5px;
+margin:1px;
+border-radius:50%}
+.mouth{width:10px;
+  height:5px;}
+.calender{padding:10px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;}
+.month{background:white;
+  width:300px;
+  height:300px;
+  margin-bottom:25px;
+  text-align:center;
+  box-shadow: 10px 5px 2px 1px rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(0, 0, 0, 0.6);}
+.days{display:flex;
+  margin-bottom:10px;}
+.day{background:white;
+  width: calc(100% / 7);
+  border-left:2px solid rgba(0, 0, 0, 0.5);
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  height:10px;}
+.day, .dayCircles{background:white;
+width: calc(100% / 7);}
+.day:nth-child(1){border:none;}
+.daysOfMonth{display:flex;
+  flex-wrap:wrap;}
+.dayCirclesInner{width:20px;
+  height:20px;
+  background:rgba(170,170,170, 0.6);
+  margin: 0px auto;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  cursor:pointer;}
+.dayCirclesInner:hover{transform: scale(1.2);}
