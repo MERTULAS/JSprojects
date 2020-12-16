@@ -42,12 +42,13 @@ class Game
         bug.classList.add("newBug");
         bug.style.top = `${Math.floor(Math.random() * (window.innerHeight - 200))}px`;
         bug.style.left = `${Math.floor(Math.random() * (window.innerWidth - 200))}px`;
+        bug.style.transform = `rotate(${Math.floor(Math.random() * 360)}deg)`;
         theGameContainer.appendChild(bug);
     }
 
     static getTimeAsDesiredFormat(time, min)
     {
-        if(time == 59)
+        if(time == 60)
         {
             time = 0;
             min++;
