@@ -1,0 +1,54 @@
+body{flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background-color: #D9C4B1;
+    background-image: radial-gradient(circle, #D9C4B1, #B59B80);
+    min-height: 100vh;}
+*{margin:0px;}
+body, .photo,  .profile-info, .profile-info> ul, .follow-me{display:flex;}
+.photo{background-size: auto;
+      background-position:center;
+      width:350px;
+      height:400px;
+      background:black;
+      flex-direction:column;
+      justify-content:flex-end;
+      align-items:center;
+      border-radius:5%;
+      box-shadow: 0px 15px 10px 0 rgba(0, 0, 0, 0.5);
+      z-index:2;
+      line-height:50px;
+      color:white;
+      font-size:17px}
+.photo > h3{font-size:30px;
+      letter-spacing: 6px;}
+.profile-info{width:240px;
+    height:60px;
+    background:white;
+    justify-content:center;
+    align-items:center;
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius:15px;
+    box-shadow:0px 15px 10px 0 rgba(0, 0, 0, 0.5);
+    z-index:1;}
+.profile-info> ul{width:100%;
+    text-align:center;
+    line-height:20px;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 30px 0 15px;
+    margin-top: -15px;}
+.follow-me{width:180px;
+    height:40px;
+    background:gray;
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius:15px;
+    box-shadow: 0px 15px 10px 0 rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    padding:6px;}
+a{text-decoration:none;
+    color:black;
+    font-size:25px}
