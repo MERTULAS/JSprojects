@@ -1,0 +1,40 @@
+html, body{width:100%;
+    height:fit-content;}
+    body{display:flex;
+    justify-content:center;}
+    *{margin:0;
+    padding:0;}
+.main{width:70%;
+    margin-top:50px;
+    margin-bottom:50px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;}
+.films{width:500px;
+    min-height:500px;
+    display:flex;
+    align-items:flex-end;
+    color: black;
+    position: relative;}
+.artists{background-size:cover;
+    background-position:right top;
+    filter: grayscale(200%)}
+.artistName{margin:10px;
+    font-size: 70px;}
+.headers{height: 150px;}
+.films.headers{overflow: hidden;
+    font-size: 40px;
+    min-height:150px;}
+.header1{transform: translateX(11%);
+    color: rgb(214, 211, 211);}
+.header2{transform: translate(-9%, 1%);}
+.film-list{list-style-type: none;
+    font-size: 20px;
+    margin: auto 10px;
+    z-index: 1;
+    text-transform: uppercase;}
+.film-list-count{font-size: 200px;
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    color: rgb(131, 131, 124);};
