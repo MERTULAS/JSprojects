@@ -1,49 +1,50 @@
 html, body{width:100%;
     height:fit-content;
-    background:red;
     display:flex;
     flex-direction:column;
     align-items:center;}
-  .chooseMain{
-    width:760px;
-    height:400px;
-    background:black;
+* {box-sizing: border-box;}
+.chooseMain{width:650px;
+    height:500px;
+    box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.5);
     margin:10px;
     display:flex;
     align-items:center;
     justify-content:space-evenly;
-  }
-  .chooseLeft, .chooseRight{
-    width:350px;
-    height:380px;
+    border-radius: 25px;}
+.chooseLeft, .chooseRight{width:350px;
+    height:90%;
     background:white;
-    margin:10px;
+    margin:0px;
     display:flex;
     flex-direction:column;
-  justify-content:center;
-  align-items: center;}
-  .image-divs{
-    background:yellow;
-    width:80%;
-    height:80%;
+    justify-content:center;
+    align-items: center;}
+.chooseLeft{transform: translateX(5%);}
+.chooseRight{transform: translateX(-5%);}
+.image-divs{width:80%;
+    min-height:80%;
     margin-top:20px;
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:center;
-  }
-  button{
-    width:70px;
-    height:40px;
+    justify-content:space-between;}
+img{width:100%;
+    min-height:100%;
+    border-radius:10%;
+    object-fit:cover;}
+button{width:70px;
     font-size:20px;
-    margin:20px 20px;
+    margin:40px 20px;
     font-style:italic;
     border-radius:5px;
     border:none;
     background-image: linear-gradient(pink, red);
-  }
-  .orDiv{
-    width:60px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);}
+button:active{box-shadow: none;
+	  transform: translateY(3px);}
+button:focus{outline: 0;}
+.orDiv{width:60px;
     height:60px;
     border-radius:50%;
     background:red;
@@ -52,11 +53,4 @@ html, body{width:100%;
     justify-content:center;
     align-items:center;
     font-size:30px;
-    background-image: linear-gradient(pink, red);
-  }
-  .orDiv .p{
-  }
-  .leaderboard{
-    width:300px;
-    height:400px;
-    background:aliceblue;}
+    background-image: linear-gradient(pink, red);}
