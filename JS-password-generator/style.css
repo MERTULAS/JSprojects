@@ -1,0 +1,44 @@
+html, body{width:100%;
+    height:100%;
+    background:#3E5190;}
+*{margin:0px;
+    padding:0px;
+    font-size:15px}
+.main{background:#2A4292;
+    width:500px;
+    height:400px;
+    margin: auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    line-height:2;
+    padding:30px;
+    border-radius:2%;
+    box-shadow:10px 10px 5px 2px rgba(0, 0, 0, 0.5);}
+body{display:flex;}
+.generatedPassDiv, .generatedPassResult, .settings{
+    display:flex;
+    justify-content:space-between;
+    width:80%;
+    margin:10px;
+    align-items:center;}
+.generatedPassDiv{width:80%;
+    height:12%;
+    background:#2A4292;
+    color:white;
+    border:2px solid orange;
+    padding:0;}
+.generatedPassResult{border:2px solid gray;
+    height:60%;
+    color:#0f0;
+    padding:2px;
+    overflow:hidden;}
+.copy{margin:5px;
+    border:none;
+    padding:5px;
+    height:80%}
+.generate{width:80%;
+    height:40px;
+    border:none;}
+input[type=number]{width:10%;}
