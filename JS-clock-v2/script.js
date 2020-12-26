@@ -1,5 +1,8 @@
 const body = document.querySelector("body");
 const clock = document.createElement("div");
+const themeChanger = document.createElement("button");
+themeChanger.innerHTML = "Dark Mode";
+themeChanger.className = "themeChanger";
 clock.className = "clock";
 const inClock = document.createElement("div");
 inClock.className = "inClock";
@@ -17,10 +20,30 @@ const digital = document.createElement("div");
 digital.className = "digitalDiv";
 const date = document.createElement("div");
 date.className = "date";
-body.append(clock, digital, date);
+body.append(themeChanger, clock, digital, date);
+
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+const themeColors = {
+    "black":{
+        "bodyBg":"black",
+        "buttonBg":"white",
+        "buttonText":"black",
+        "clockPartsBg":"white",
+        "commasTextsColor":"white",
+        "allTextsColor":"white"
+    },
+    "white":{
+        "bodyBg":"white",
+        "buttonBg":"black",
+        "buttonText":"white",
+        "clockPartsBg":"black",
+        "commasTextsColor":"black",
+        "allTextsColor":"black"
+    }
+};
 digital.innerHTML = 
     `
         <div class="hourDigital"></div>
@@ -50,19 +73,16 @@ class Clock{
 
     rotateSec(){
         let rotateSecDeg = (this.sec * 360)/60 + 90;
-        console.log(this.sec, rotateSecDeg);
         second.style.transform = `rotate(${rotateSecDeg}deg)`;
     }
 
     rotateMin(){
-        let rotateMinDeg = (this.min * 360)/60 + 90;
-        console.log(this.min, rotateMinDeg);
+        let rotateMinDeg = (this.min * 360)/60 + 90 + (this.sec * 6)/60;
         minute.style.transform = `rotate(${rotateMinDeg}deg)`;
     }
 
     rotateHr(){
-        let rotateHrDeg = (this.hr * 360)/12 + 90;
-        console.log(this.hr, rotateHrDeg);
+        let rotateHrDeg = (this.hr * 360)/12 + 90 + (this.min * 30)/60;
         hour.style.transform = `rotate(${rotateHrDeg}deg)`;
     }
 
@@ -95,5 +115,11 @@ setInterval(() => {
     rotates.rotateHr();
     rotates.digital();
     rotates.dateString();
-    console.log(hour, minute, second);
 }, 1000);
+
+themeChanger.onclick = function(){
+    let desiredTheme = getComputedStyle(this).getPropertyValue("--buttonBg");
+Object.keys(themeColors[desiredTheme]).forEach(attribute => {
+        document.documentElement.style.setProperty(`--${attribute}`, themeColors[desiredTheme][attribute]);
+    });
+};

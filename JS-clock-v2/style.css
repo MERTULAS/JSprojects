@@ -1,14 +1,21 @@
 html, body{width:100%;
     height:100%;
-    background:white;}
+    background: var(--bodyBg);
+    margin: 0;}
+*{transition: background 0.5s;}
 body{display:flex;
     flex-direction: column;
     justify-content:center;
     align-items:center;}
-:root{--height:3px;}
+:root{--height:3px;
+    --bodyBg:black;
+    --buttonBg:white;
+    --buttonText: black;
+    --clockPartsBg:white;
+    --commasTextsColor: white;
+    --allTextsColor:white;}
 .clock{width:300px;
     height:300px;
-    background:white;
     border-radius:50%;
     position:relative;
     display: flex;
@@ -16,17 +23,15 @@ body{display:flex;
     align-items: center;}
 .inClock{width:250px;
     height:250px;
-    background:white;
     border-radius:50%;
     position:relative;}
 .hour{width:50%;
     height:calc(var(--height) + 2px);
-    background:black;
     left:0;}
 .minute{width:50%;
     height:var(--height);
-    background:black;
     left:0;}
+.hour, .minute, .center, .nums{background:var(--clockPartsBg)}
 .second{width:50%;
     height:var(--height);
     background:red;
@@ -35,7 +40,6 @@ body{display:flex;
     width:calc(var(--height) + 10px);
     height:calc(var(--height) + 10px);
     top:calc(50% - var(--height)/2 - 3px);
-    background:black;
     left:calc(50% - var(--height)/2 - 6px);
     border-radius:50%;
     border: 2px solid red;}
@@ -45,7 +49,6 @@ body{display:flex;
     transform-origin:100%;}
 .nums{width:10px;
     height:7px;
-    background:black;
     position:absolute;
     left:5px;
     top: 50%;
@@ -60,13 +63,13 @@ body{display:flex;
 .digitalDiv{width: 200px;
     height: 80px;
     display: flex;
-    color:black;
+    color:var(--commasTextsColor);
     font-size:50px;
     align-items: center;
     margin: 20px;}
 .hourDigital, .minDigital{width:50%;
     height: 100%;
-    background-color: rgb(49, 47, 47);
+    background-color:rgb(49, 47, 47);
     margin: 8px;
     font-size:50px;
     display:flex;
@@ -79,7 +82,8 @@ body{display:flex;
     height: fit-content;
     display: flex;
     letter-spacing: 3px;
-    font-weight: 600;}
+    font-weight: 600;
+    color:var(--allTextsColor)}
 .date > *{margin:5px;
     text-transform: uppercase;}
 #date{background:gray;
@@ -90,3 +94,10 @@ body{display:flex;
     margin: 0;
     width: 28px;
     height: 28px;}
+.themeChanger{padding:10px;
+    color: var(--buttonText);
+    background: var(--buttonBg);
+    margin-top:-55px;
+    margin-bottom: 50px;
+    border: none;
+    border-radius:10px}
