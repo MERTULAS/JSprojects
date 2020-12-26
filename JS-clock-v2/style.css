@@ -27,15 +27,18 @@ body{display:flex;
     position:relative;}
 .hour{width:50%;
     height:calc(var(--height) + 2px);
-    left:0;}
+    left:0;
+    box-shadow:5px 5px 6px 1px;}
 .minute{width:50%;
     height:var(--height);
-    left:0;}
+    left:0;
+    box-shadow:5px 5px 6px 1px;}
 .hour, .minute, .center, .nums{background:var(--clockPartsBg)}
 .second{width:50%;
     height:var(--height);
     background:red;
-    left:0;}
+    left:0;
+    box-shadow:5px 5px 6px 1px;}
 .center{position:absolute;
     width:calc(var(--height) + 10px);
     height:calc(var(--height) + 10px);
@@ -93,11 +96,13 @@ body{display:flex;
     justify-content: center;
     margin: 0;
     width: 28px;
-    height: 28px;}
+    height: 28px;
+    box-shadow:5px 5px 15px 1px rgba(0, 0, 0, 1);}
 .themeChanger{padding:10px;
     color: var(--buttonText);
     background: var(--buttonBg);
     margin-top:-55px;
     margin-bottom: 50px;
     border: none;
-    border-radius:10px}
+    border-radius:10px;
+    box-shadow:10px 10px 25px 1px rgba(0, 0, 0, 1);}
