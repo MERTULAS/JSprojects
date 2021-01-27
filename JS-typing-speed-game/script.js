@@ -23,8 +23,8 @@ class TypeSpeedGame{
         this.url = url;
     }
 
-    getRandomText(){
-        fetch(this.url)
+    async getRandomText(){
+        await fetch(this.url)
         .then(data => data.json())
         .then(result => {
             console.log(result.content);
