@@ -6,8 +6,8 @@ class Project{
         this.projectsData = projectsData;
     }
 
-    getProjects(){
-        fetch(this.projectsData)
+    async getProjects(){
+        await fetch(this.projectsData)
         .then(data => data.json())
         .then(result => {
             Object.keys(result).forEach(key => {
@@ -17,7 +17,7 @@ class Project{
                             <p>CLICK ME!</p>
                             <h1>${key}</h1>
                         </a>
-                        <iframe src="${result[key].project_path}" scrolling="no"></iframe>
+                        <iframe src="${result[key].project_path}" scrolling="no" allowfullscreen></iframe>
                     </div>`;
             });
         });
