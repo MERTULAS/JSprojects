@@ -94,5 +94,9 @@
     "JS Background Generator":{
         "project_id":"24",
         "project_path":"./JS-background-generator/index.html"
+    },
+    "CSS Menu Design1":{
+        "project_id":"25",
+        "project_path":"./CSS-menu-design1/index.html"
     }
 }

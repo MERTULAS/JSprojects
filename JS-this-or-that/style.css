@@ -2,7 +2,8 @@ html, body{width:100%;
     height:fit-content;
     display:flex;
     flex-direction:column;
-    align-items:center;}
+    align-items:center;
+    background-color: white;}
 * {box-sizing: border-box;}
 .chooseMain{width:650px;
     height:500px;
