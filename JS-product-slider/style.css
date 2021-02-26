@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --slider-width: 75vw;
+    --slider-parent-width:75vw;
+    --box-margins: 10px;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(163, 161, 161);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-parent{
+    padding: 10px;
+    background-color: rgb(245, 245, 245);
+    width: var(--slider-parent-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider{
+    width: var(--slider-width);
+    height: 65vh;
+    background-color: rgb(245, 245, 245);
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.slider::-webkit-scrollbar{
+    display: none;
+}
+
+.arrow{
+    color: black;
+    font-size: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: fit-content;
+    height: fit-content;
+    padding: 3px;
+    z-index: 3;
+}
+
+.arrow:hover{
+    border: 1px solid gray;
+    color: gray;
+}
+
+.box{
+    min-width: calc((var(--slider-width) - (15 * var(--box-margins))) / 3);
+    height: 90%;
+    margin-left: var(--box-margins);
+    margin-right: var(--box-margins);
+    background-color: rgb(207, 207, 207);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    left: 0;
+    overflow: hidden;
+    position: relative;
+    transition: .5s;
+}
+
+.upper-block{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 60%;
+}
+
+.images{
+    background-color: rgb(207, 207, 207);
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.left-infos{
+    width: 20%;
+    position: absolute;
+    left: 0;
+    height: 60%;
+}
+
+.discount, .isNew, .likeCount{
+    height: 20%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+.discount{
+    background-color: rgb(192, 18, 18);
+    color: white;
+}
+
+.isNew{
+    background-color: black;
+    color: white;
+}
+
+.likeCount{
+    background-color: rgb(207, 207, 207);
+    color: rgb(185, 35, 35);
+}
+
+img{
+    mix-blend-mode: multiply;
+    width: 60px;
+}
+
+img:hover{
+    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, .2);
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.names{
+    font-size: 18px;
+    text-align: center;
+    width: 60%;
+    height: 20%;
+    margin: 5px;
+}
+
+.params{
+    font-size: 18px;
+    text-align: center;
+    color: rgb(122, 120, 120);
+    width: 70%;
+    min-height: 12%;
+}
+
+.price{
+    display: flex;
+    font-weight: 500;
+    min-height: 6%;
+    align-items: flex-end;
+    padding: 5px;
+}
+
+.price-inner{
+    margin: 5px;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.price-inner:last-child{
+    color: rgb(122, 120, 120);
+    text-decoration: line-through;
+    font-weight: 300;
+}
+
+.basePrice{
+    font-size: 15px;
+    color: rgb(122, 120, 120);
+    max-height: fit-content;
+    margin-bottom: 10px;
+}
+
+
+@media only screen and (min-width:431px) and (max-width:1300px) {
+    .slider-parent{
+        height: 80vh;
+    }
+
+    .slider{
+        height: 80vh;
+    }
+
+    :root{
+        --slider-width: 90vw;
+        --slider-parent-width:95vw;
+        --box-margins: 5px;
+    }
+
+    .box{
+        min-width: 300px;
+    }
+
+}
+
+@media only screen and (min-width:425px) and (max-width:430px) {
+    .slider-parent{
+       
+        height: 85vh;
+    }
+    .slider{
+        
+        height: 85vh;
+    }
+
+    .box{
+        min-width: 80vw;
+    }
+
+    .upper-block{
+        height: 50%;
+    }
+    :root{
+        --slider-width: 90vw;
+        --slider-parent-width:95vw;
+        --box-margins: 5px;
+    }
+
+}
+
+
+@media only screen and (max-width:424px) {
+    .slider-parent{
+       
+        height: 85vh;
+    }
+    .slider{
+        
+        height: 85vh;
+    }
+
+    .box{
+        min-width: 70vw;
+    }
+
+    .upper-block{
+        height: 50%;
+    }
+    :root{
+        --slider-width: 90vw;
+        --slider-parent-width:95vw;
+        --box-margins: 5px;
+    }
+}
