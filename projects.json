@@ -43,64 +43,68 @@
         "project_id":"11",
         "project_path":"./JS-image-with-particles/index.html"
     },
-    "JS Product Slider":{
+    "JS Image Particles":{
         "project_id":"12",
+        "project_path":"./JS-image-with-particles/index.html"
+    },
+    "JS Product Slider":{
+        "project_id":"13",
         "project_path":"./JS-product-slider/index.html"
     },
     "JS Clock":{
-        "project_id":"13",
+        "project_id":"14",
         "project_path":"./JS-clock/index.html"
     },
     "JS Pokemons":{
-        "project_id":"14",
+        "project_id":"15",
         "project_path":"./JS-pokemons-async-await/index.html"
     },
     "JS CSS Changer":{
-        "project_id":"15",
+        "project_id":"16",
         "project_path":"./JS-css-changer/index.html"
     },
     "JS James Bond Tributes":{
-        "project_id":"16",
+        "project_id":"17",
         "project_path":"./JS-james-bond-tributes/index.html"
     },
     "JS This or That":{
-        "project_id":"17",
+        "project_id":"18",
         "project_path":"./JS-this-or-that/index.html"
     },
     "JS Typing Speed Game":{
-        "project_id":"18",
+        "project_id":"19",
         "project_path":"./JS-typing-speed-game/index.html"
     },
     "JS User Profile Card":{
-        "project_id":"19",
+        "project_id":"20",
         "project_path":"./JS-user-profile-card/index.html"
     },
     "JS Password Generator":{
-        "project_id":"20",
+        "project_id":"21",
         "project_path":"./JS-password-generator/index.html"
     },
     "JS Math Game":{
-        "project_id":"21",
+        "project_id":"22",
         "project_path":"./JS-math-game/index.html"
     },
     "JS Get Random Meal":{
-        "project_id":"22",
+        "project_id":"23",
         "project_path":"./JS-get-random-meal/index.html"
     },
     "JS Canvas Paint":{
-        "project_id":"23",
+        "project_id":"24",
         "project_path":"./JS-html5-canvas/index.html"
     },
     "JS Map Generator":{
-        "project_id":"24",
+        "project_id":"25",
         "project_path":"./JS-map-generator-v1/index.html"
     },
     "JS Background Generator":{
-        "project_id":"25",
+        "project_id":"26",
         "project_path":"./JS-background-generator/index.html"
     },
     "CSS Menu Design1":{
-        "project_id":"26",
+        "project_id":"27",
         "project_path":"./CSS-menu-design1/index.html"
     }
 }
